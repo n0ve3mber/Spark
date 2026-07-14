@@ -1,5 +1,8 @@
 # Spark - Windows to Windows File Transfer
 
+<img width="1408" height="768" alt="spark_Logo" src="https://github.com/user-attachments/assets/dc029205-c0c5-4240-8af0-397a59964dea" />
+
+
 Spark is a lightweight tool written in Go that allows you to transfer one or multiple files from one Windows machine to another. Because it is written in Go, it compiles into a single, self-contained binary that runs in most Windows environments with absolutely no external dependencies.
 
 ---
@@ -27,7 +30,7 @@ spark.exe -b 192.168.1.136 8080
 ```
 
 #### Optional Flags:
-* Use `-v` to enable **verbose mode**, which displays the list of served files and active connections.
+* Use `-v` to enable **verbose mode**, which displays the list of served files.
 * You can optionally specify a custom directory to serve as a positional argument at the end:
 
 ```cmd
@@ -38,7 +41,7 @@ spark.exe -b 192.168.1.136 8080 C:\Users\user\Desktop -v
 
 ### 2. On the Client Side (Receiver)
 
-You can list all available files hosted by the server using the `-l` flag:
+You can request all available files hosted by the server using the `-l` flag:
 
 ```cmd
 spark.exe -l 192.168.1.136 8080
